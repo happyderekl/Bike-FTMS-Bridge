@@ -22,7 +22,7 @@
 ### 1. 克隆项目
 
 ```bash
-git clone https://github.com/your-username/bike-ftms.git
+git clone https://github.com/happyderekl/Bike-FTMS-Bridge.git
 cd bike-ftms
 ```
 
