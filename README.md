@@ -158,7 +158,7 @@ python ftms_server.py
 | 参数 | 默认值 | 说明 |
 |------|--------|------|
 | csv_enabled | false | 是否启用CSV数据记录 |
-| max_resistance_level | 24 | 动感单车最大阻力档位 |
+| max_resistance_level | 24 | 需调整为你的动感单车最大阻力档位 |
 | base_resistance_level | 6.0 | 平路骑行时的基础档位 |
 | grade_effect_uphill | 1.5 | 上坡坡度影响系数（每1%坡度增加的档位数） |
 | grade_effect_downhill | 1.0 | 下坡坡度影响系数（每1%坡度减少的档位数） |
