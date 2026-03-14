@@ -1,0 +1,48 @@
+{
+    "_comment": "Bike FTMS Bridge 配置文件",
+    
+    "csv_enabled": false,
+    "csv_enabled_desc": "是否启用CSV数据记录",
+    
+    "max_resistance_level": 24,
+    "max_resistance_level_desc": "动感单车最大阻力档位",
+    
+    "base_resistance_level": 6.0,
+    "base_resistance_level_desc": "基础平路阻力档位（适配9kg飞轮体感）",
+    
+    "grade_effect_uphill": 1.5,
+    "grade_effect_uphill_desc": "上坡坡度影响系数（每1%坡度增加的档位数）",
+    
+    "grade_effect_downhill": 1.0,
+    "grade_effect_downhill_desc": "下坡坡度影响系数（每1%坡度减少的档位数）",
+    
+    "wind_effect": 0.05,
+    "wind_effect_desc": "风速影响系数（每1m/s逆风增加的档位数）",
+    
+    "crr_effect": 500,
+    "crr_effect_desc": "路面阻力影响系数（CRR每增加0.001增加的档位数）",
+    
+    "resistance_throttle_interval": 5.0,
+    "resistance_throttle_interval_desc": "阻力调节节流间隔（秒），防止频繁发送指令",
+    
+    "ftms_update_interval": 1.0,
+    "ftms_update_interval_desc": "FTMS数据广播间隔（秒）",
+    
+    "reconnect_interval": 15,
+    "reconnect_interval_desc": "蓝牙重连间隔（秒）",
+    
+    "heartbeat_interval": 1.0,
+    "heartbeat_interval_desc": "心跳包发送间隔（秒）",
+    
+    "log_level": "INFO",
+    "log_level_desc": "日志级别：DEBUG, INFO, WARNING, ERROR",
+    
+    "bluetooth_device_name": "Bike_FTMS",
+    "bluetooth_device_name_desc": "FTMS服务蓝牙设备名称",
+    
+    "csv_dir": "data",
+    "csv_dir_desc": "CSV文件存储目录",
+    
+    "identity_file": "identity.json",
+    "identity_file_desc": "身份验证配置文件路径"
+}

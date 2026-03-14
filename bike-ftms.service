@@ -1,0 +1,16 @@
+[Unit]
+Description=Keep Bike FTMS Server
+After=network.target bluetooth.target
+Wants=bluetooth.target
+
+[Service]
+Type=simple
+User=admin
+WorkingDirectory=/home/admin/bike_project
+Environment="PATH=/home/admin/bike_project/venv/bin"
+ExecStart=/home/admin/bike_project/venv/bin/python /home/admin/bike_project/ftms_server.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
