@@ -148,12 +148,23 @@ python ftms_server.py
 
 编辑 `config.json` 可以调整以下参数：
 
-| 参数 | 默认值 | 通俗说明 |
-|------|--------|----------|
-| max_resistance_level | 24 | 你的单车有几档阻力？ |
+| 参数 | 默认值 | 说明 |
+|------|--------|------|
+| csv_enabled | false | 是否启用CSV数据记录 |
+| max_resistance_level | 24 | 动感单车最大阻力档位 |
 | base_resistance_level | 6.0 | 平路骑行时的基础档位 |
+| grade_effect_uphill | 1.5 | 上坡坡度影响系数（每1%坡度增加的档位数） |
+| grade_effect_downhill | 1.0 | 下坡坡度影响系数（每1%坡度减少的档位数） |
+| wind_effect | 0.05 | 风速影响系数（每1m/s逆风增加的档位数） |
+| crr_effect | 500 | 路面阻力影响系数 |
+| resistance_throttle_interval | 5.0 | 阻力调节节流间隔（秒） |
+| ftms_update_interval | 1.0 | FTMS数据广播间隔（秒） |
+| reconnect_interval | 15 | 蓝牙重连间隔（秒） |
+| heartbeat_interval | 1.0 | 心跳包发送间隔（秒） |
 | log_level | INFO | 日志详细程度（DEBUG最详细） |
 | bluetooth_device_name | Bike_FTMS | 蓝牙设备名称 |
+| csv_dir | data | CSV文件存储目录 |
+| identity_file | identity.json | 身份验证配置文件路径 |
 
 > 💡 **大多数情况下，默认配置就够用了！**
 
@@ -166,6 +177,23 @@ python ftms_server.py
 1. 确保单车已开机
 2. 确保单车没有被手机App连接（先断开手机蓝牙）
 3. 检查 `identity.json` 是否正确生成
+
+### Q: 蓝牙权限报错？
+**A:** 
+Linux 系统默认限制蓝牙访问权限，需要手动配置：
+
+```bash
+# 方法一：将当前用户加入 bluetooth 组（推荐，重启后生效）
+sudo usermod -aG bluetooth $USER
+
+# 方法二：临时赋予蓝牙权限（重启后失效）
+sudo setcap cap_net_raw,cap_net_admin+eip $(eval readlink -f `which python3`)
+
+# 方法三：使用 sudo 运行（不推荐）
+sudo python ftms_server.py
+```
+
+> 💡 **推荐使用方法一**，配置后重启系统即可，无需每次使用 sudo
 
 ### Q: 连接后没有数据？
 **A:** 
