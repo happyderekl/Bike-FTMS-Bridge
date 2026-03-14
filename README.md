@@ -33,7 +33,7 @@ cd Bike-FTMS-Bridge
 1. 在安卓手机上启用蓝牙HCI日志
 2. 使用动感单车App连接单车
 3. 提取HCI日志文件（通常为`btsnoop_hci.log`格式）
-4. 使用提供的工具生成鉴权配置（来源：`https://github.com/shinkisan/BikeCon/`）
+4. 使用提供的工具生成鉴权配置（来源：[shinkisan/BikeCon](https://github.com/shinkisan/BikeCon/)）
 
 ```bash
 # 创建虚拟环境
