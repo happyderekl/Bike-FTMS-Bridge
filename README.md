@@ -2,13 +2,13 @@
 
 > 让你的动感单车连接更多骑行App！
 
-这是一个小工具，可以把你的动感单车"变身"成标准蓝牙健身设备，从而支持更多骑行应用（如 Zwift、TrainerRoad、MyWhoosh 等）。
+这是一个小工具，可以把你的动感单车"变身"成标准蓝牙健身设备，从而支持更多骑行应用（如 Zwift、GTBikeV、MyWhoosh 等）。
 
 ## 🎯 这个项目能做什么？
 
 简单来说：
 - 你的动感单车只能用官方App？❌
-- 想用 Zwift、TrainerRoad、MyWhoosh 等第三方App？✅
+- 想用 Zwift、GTBikeV、MyWhoosh 等第三方App？✅
 - 这个项目就是"翻译器"，让单车和这些App能互相"听懂"
 
 **核心功能：**
