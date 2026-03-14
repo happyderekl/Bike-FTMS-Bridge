@@ -23,7 +23,7 @@
 
 ```bash
 git clone https://github.com/happyderekl/Bike-FTMS-Bridge.git
-cd bike-ftms
+cd Bike-FTMS-Bridge
 ```
 
 ### 2. 获取鉴权配置
